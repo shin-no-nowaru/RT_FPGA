@@ -35,9 +35,9 @@ module SW_to_HEX0 (
             4'h8: HEX0_o = 7'b0000000;
             4'h9: HEX0_o = 7'b0010000;
             4'hA: HEX0_o = 7'b0001000;
-            4'hB: HEX0_o = 7'b0000000;
+            4'hB: HEX0_o = 7'b0000011;
             4'hC: HEX0_o = 7'b1000110;
-            4'hD: HEX0_o = 7'b1000000;
+            4'hD: HEX0_o = 7'b0100001;
             4'hE: HEX0_o = 7'b0000110;
             4'hF: HEX0_o = 7'b0001110;
             default: HEX0_o = 0;
