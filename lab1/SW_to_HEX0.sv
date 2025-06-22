@@ -1,6 +1,7 @@
 module SW_to_HEX0 (
     input  logic [9:0] SW_i,
-    output logic [6:0] HEX0_o
+    output logic [6:0] HEX0_o,
+    output logic [7:0] an_o
 );
 
     logic [3:0] MUX_o;
@@ -46,5 +47,6 @@ module SW_to_HEX0 (
     end
 
     assign control_signals = SW_i[9:8];
+    assign an_o            = 8'b11111110;
 
 endmodule

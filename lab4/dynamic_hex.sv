@@ -12,22 +12,12 @@ module dynamic_hex(
     output logic       cg_o
     );
 
-    logic key_i, key;
+    logic key_i;
     logic [31:0] word1, word2, data;
-
-    synchronization 
-    #(
-        .N(1)
-    ) key_sync 
-    (
-        .CLOCK_50_i(clk_i),
-        .unsync_i(key_i),
-        .sync_o(key)
-    ); 
 
     hex_driver bin2hex (
         .clk_i(clk_i),
-        .rst_i(key),
+        .rst_i(key_i),
         .data_i(data),
         .an(an_o),
         .ca(ca_o),
